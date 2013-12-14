@@ -11,30 +11,29 @@ a {
     max-width: 500px;
     margin-bottom: 50px;
 }
-
+.message-form {
+    margin: 5px;
+}
 /* LAYOUT CSS */
 #layout {
-    padding-left:500px; /* "left col (nav + list)" width */
+    padding-left:150px; /* "left col (nav + list)" width */
     position: relative;
 }
 
-#nav, #list {
+#nav {
     position: fixed;
     top: 0;
     bottom: 0;
     overflow: auto;
 }
 #nav {
-    margin-left:-500px; /* "left col (nav + list)" width */
+    margin-left:-150px; /* "left col (nav + list)" width */
     width:150px;
     background: rgb(37, 42, 58);
     text-align: center;
     padding: 2em 0;
 }
-#list {
-    margin-left: -350px;
-    border-right: 1px solid #ddd;
-}
+
 
 #nav .pure-menu {
     background: transparent;
@@ -107,19 +106,10 @@ a {
         border-right: 0;
         border-bottom: 1px solid #ddd;
     }
-    #main {
-        position: fixed;
-        top: 33%;
-        right: 0;
-        bottom: 0;
-        left: 150px;
-        overflow: auto;
-        width: auto; /* so that it's not 100% */
-    }
 }
 
 @media (max-width: 480px) {
-    #layout, #nav, #list, #main {
+    #layout, #nav, #list {
         position: static;
         margin: 0;
         padding: 0;
