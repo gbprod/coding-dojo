@@ -1,11 +1,15 @@
 <div class="login-form">
-    <form class="pure-form pure-form-stacked">
+    <form class="pure-form pure-form-stacked" name="formLogin" ng-submit="submit(formLogin)">
         <fieldset>
             <legend>Connexion</legend>
 
-            <input type="text" name='pseudo' placeholder="Pseudo" class="pure-input-1">
+            <input type="text" name='pseudo' placeholder="Pseudo" class="pure-input-1"
+                ng-model="pseudo" ng-minlength="3" required>
 
-            <button type="submit" class="pure-button pure-button-primary">Se connecter</button>
+            <button type="submit" class="pure-button pure-button-primary"
+                ng-disabled="formLogin.$invalid">
+                Se connecter
+            </button>
         </fieldset>
     </form>
 </div>

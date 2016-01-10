@@ -3,23 +3,23 @@
         <div class="nav-inner">
             <div class="pure-menu pure-menu-open">
                 <ul>
-                    <!-- <li>
-                        <a href="#"></a>
-                    </li> -->
+                    <li ng-repeat="user in users">
+                        <a href="#">{{ user.pseudo }}</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="pure-u-1" id="list">
-        <!-- <div class="chat-item pure-g">
-            <div class="pure-u-3-4">
-                <h5 class="chat-name"></h5>
-                <p class="chat-message"></p>
-            </div>
-        </div> -->
-        <form class="pure-form pure-g message-form" name="formMessage">
-            <input type="text" name='message' placeholder="Message" class="pure-input-1">
+        <div class="chat-item pure-g"
+            ng-repeat="message in messages">
+            <message msg="message"></message>
+        </div>
+        <form class="pure-form pure-g message-form" name="formMessage"
+            ng-submit="send(formMessage)">
+            <input type="text" name='message' placeholder="Message" class="pure-input-1"
+                ng-model='message' required>
         </form>
     </div>
 </div>
